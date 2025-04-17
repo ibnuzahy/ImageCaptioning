@@ -1,4 +1,4 @@
 # nixpacks.toml
 
 [start]
-cmd = "gunicorn server:app"
+cmd = "gunicorn server:app --timeout 300 --bind 0.0.0.0:8080"
