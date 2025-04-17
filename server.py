@@ -19,8 +19,11 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Load model (offline)
 MODEL_PATH = "./models/Salesforce/blip-image-captioning-base"
-processor = AutoProcessor.from_pretrained(MODEL_PATH, local_files_only=True)
-model = AutoModelForImageTextToText.from_pretrained(MODEL_PATH, local_files_only=True)
+# processor = AutoProcessor.from_pretrained(MODEL_PATH, local_files_only=True)
+# model = AutoModelForImageTextToText.from_pretrained(MODEL_PATH, local_files_only=True)
+processor = AutoProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
+model = AutoModelForImageTextToText.from_pretrained("Salesforce/blip-image-captioning-base")
+
 
 # Init DB
 def init_db():
